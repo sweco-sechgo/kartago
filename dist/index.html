@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>kartago-demo</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="theme/default/style.css"></link>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+
+<body>
+	<h1>kartago-demo</h1>
+ 	
+ 	<pre data-bind="text: ko.toJSON($data, null, 2)"></pre>
+
+	<div id="map"></div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="kartago-demo.js"></script>
+	<script src="app.js"></script>
+
+
+	<script type="text/html" id="dropdown-template">
+		<a href="#" data-toggle="dropdown" data-bind="click: defaultCommand">
+			<span data-bind="attr: {class: iconClass}"/> <span data-bind="text: name"/>
+			<!-- ko if: inactive -->
+			<b class="caret"></b>
+			<!-- /ko -->
+		</a>
+		
+		<ul class="dropdown-menu" data-bind="foreach: commands">
+			<li><a href="#" data-bind="click: handler"><span data-bind="text: name"/></a></li>
+		</ul>
+	</script>
+</body>
+
+</html>

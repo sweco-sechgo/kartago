@@ -1,0 +1,16 @@
+{
+  "name": "kartago-demo",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "grunt-express": "~1.0.0-beta2",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-open": "~0.2.1",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-copy": "latest"
+  }
+}
