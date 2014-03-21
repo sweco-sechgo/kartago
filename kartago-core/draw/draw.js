@@ -62,6 +62,12 @@
 			activateControl(_controls[data.id]);
 		};
 
+		this.commandClear = function (data, event) {
+			for (var lKey in _layers) {
+				_layers[lKey].removeAllFeatures();
+			}
+		};
+
 		// View Model
 		this.viewId = "draw-command";
 
@@ -97,6 +103,10 @@
 			"id": "polygon",
 			"name": "Yta",
 			"handler": this.commandDraw
+		}, {
+			"id": "clear",
+			"name": "Rensa",
+			"handler": this.commandClear
 		}];
 	};
 
